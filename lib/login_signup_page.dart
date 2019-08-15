@@ -33,4 +33,23 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
     } return Container(height: 0.0, width: 0.0,);
 
   }
+
+  /**
+   * We just place one widget inside a padding widget and use padding: EdgeInsets.fromLTRB()
+   * which means from left, top, right and bottom and enter the value of padding at correct position accordingly.
+   **/
+  Widget _showLogo() {
+    return new Hero(
+      tag: 'hero',
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(0.0, 70.0, 0.0, 0.0),
+        child: CircleAvatar(
+          backgroundColor: Colors.transparent,
+          radius: 48.0,
+          child: Image.asset('assets/flutter-icon.png'),
+        ),
+      ),
+    );
+  }
+
 }
