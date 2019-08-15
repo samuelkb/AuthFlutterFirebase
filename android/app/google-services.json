@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "791499113458",
+    "firebase_url": "https://authwithfirebase-e8148.firebaseio.com",
+    "project_id": "authwithfirebase-e8148",
+    "storage_bucket": "authwithfirebase-e8148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791499113458:android:d3f2f3c39c7e2e99",
+        "android_client_info": {
+          "package_name": "learning.com.login_with_email"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791499113458-f4sbiob0vre3hes99c5lhmiagqvq4b2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "learning.com.login_with_email",
+            "certificate_hash": "a7882ed245171aa8e9551f5a207a440fe59df92f"
+          }
+        },
+        {
+          "client_id": "791499113458-c8infp7ou14feomibliufvhbcnrh210b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "learning.com.login_with_email",
+            "certificate_hash": "37a7b4e41aa36c32359bf4936b16cd5726618c51"
+          }
+        },
+        {
+          "client_id": "791499113458-js8k02kkrgo7kflkqbdia7reum1qgna0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYXGVYiqXdxuRHhO7Z-I-Pjx8i6dTE21I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791499113458-js8k02kkrgo7kflkqbdia7reum1qgna0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
