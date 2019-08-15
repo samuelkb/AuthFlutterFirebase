@@ -20,8 +20,8 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
   bool _isLoading; /// we check on it whether now the screen is loading or not.
   String _email;
   String _password;
-  FormMode _formMode = FormMode.LOGIN; /// Initial form is login form
   String _errorMessage; /// Store the error message from Firebase
+  FormMode _formMode = FormMode.LOGIN; /// Initial form is login form
 
 
   /// We use this method to set initial values/state to our application.
@@ -41,8 +41,8 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
         ),
         body: Stack(
           children: <Widget>[
-            //_showBody(),
-            //_showCircularProgress(),
+            _showBody(),
+            _showCircularProgress(),
           ],
         ));
   }
@@ -120,19 +120,22 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
   Widget _showPrimaryButton() {
     return new Padding(
         padding: EdgeInsets.fromLTRB(0.0, 45.0, 0.0, 0.0),
-        child: new MaterialButton(
-          elevation: 5.0,
-          minWidth: 200.0,
-          height: 42.0,
-          color: Colors.blue,
-          child: _formMode == FormMode.LOGIN
-              ? new Text('Login',
-              style: new TextStyle(fontSize: 20.0, color: Colors.white))
-              : new Text('Create account',
-              style: new TextStyle(fontSize: 20.0, color: Colors.white)),
-          //onPressed: _validateAndSubmit,
+        child: SizedBox(
+          height: 40.0,
+          child: new RaisedButton(
+            elevation: 5.0,
+            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+            color: Colors.blue,
+            child: _formMode == FormMode.LOGIN
+                ? new Text('Login',
+                style: new TextStyle(fontSize: 20.0, color: Colors.white))
+                : new Text('Create account',
+                style: new TextStyle(fontSize: 20.0, color: Colors.white)),
+            onPressed: null, //_validateAndSubmit
+          ),
         ));
   }
+
 
   /// Secondary button for user to be able to toggle between signup and login form.
   /// 'onPressed' method, we would like to toggle the state of the form between LOGIN and SIGNUP.
@@ -188,4 +191,23 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
     }
   }
 
+  /// arrange previous individual UI components and put it back to our ListView.
+  Widget _showBody(){
+    return new Container(
+        padding: EdgeInsets.all(16.0),
+        child: new Form(
+          key: _formKey,
+          child: new ListView(
+            shrinkWrap: true,
+            children: <Widget>[
+              _showLogo(),
+              _showEmailInput(),
+              _showPasswordInput(),
+              _showPrimaryButton(),
+              _showSecondaryButton(),
+              _showErrorMessage(),
+            ],
+          ),
+        ));
+  }
 }
